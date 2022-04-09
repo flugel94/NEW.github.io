@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- OPG設定-->
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8">
+    <!-- headerの設定 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEWはベンチャー稲門会の下部組織で〜">
+  <meta property="og:title" content="NEW(Next Entrepreneur Waseda)">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="早稲田の写真">
+  <meta property="og:description" content="内容説明">
+  <title>NEW(Next Entrepreneur Waseda)</title>
+
+    <!-- ここから下はリンク送付時の写真の設定 -->
+  <link rel="icon" href="NEW_figure">
+  <link rel="icon" type="image/svg+xml" href="NEW_icon.webp">
+  <link rel="apple-touch-icon" sizes="180x180" href="NEW_icon.webp">
+  <!-- 高速読み込みの設定-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- cssとの連結-->
+  <link rel="stylesheet" href="format1.css">
+  <link rel="stylesheet" href="format2.css">
+  <link rel="stylesheet" href="format3.css">
+</head>
+<body>
+  <header class="header page__header">
+    <h1 class="header__title">
+      <a href="#">
+        <img class="header__logo" src="NEW_icon.webp" alt="NEW" width="400" height="400">
+      </a>
+    </h1>
+    <nav class="header__navigation">
+      <ul class="navigation">
+          <!-- バーナーの表示-->
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">Home</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#activity">Activity</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+   <!-- アナウンスメントの表示-->
+  <aside class="announcement">
+      ここで<a href="ここにURLを入力" target="_blank"
+      rel="noreferrer">アナウンスメント</a>を行えます。
+  </aside>
+  <img class="eyecatch" src="NEW_figure4.webp" alt="NEWの写真" width="2000" height="3000">
+  <h2 class="catchphrase">キャッチフレーズ<wbr>なんかかっこいいの。</h2>
+  <main class="page__content">
+    <div class="sectionlist__item">
+    <p>
+        NEWの説明とか
+    </p>
+    <p>
+      NEWはベンチャー稲門会の下部組織で〜
+    </p>
+    </div>
+    <hr class="partition">
+    <article class="sectionlist__item">
+        <!-- 新着情報の更新-->
+      <h2>新着情報</h2>
+      <ol class="newslist">
+        <li class="news newslist__item">
+          <time class="news__date" datetime="2022-04-09">2022年4月09日</time>
+          <span class="news__summary">NEW公式サイトを公開しました。</span>
+        </li>
+      </ol>
+    </article>
+    <!-- ここから本文-->
+    <section id="activity" class="sectionlist__item">
+      <h2>活動内容</h2>
+      <p>活動内容の紹介</p>
+    </section>
+
+    <section id="seminar" class="sectionlist__item">
+      <h2>企画紹介など？</h2>
+      <ul id="seminarlist" class="seminarlist">
+        <li class="seminar seminarlist__item">
+          <img class="seminar__thumbnail" src="NEW_figure1.webp" alt="NEWのがぞう1" loading="lazy">
+          <div class="seminar__info">
+            <div class="seminar__name">活動名</div>
+            <div class="seminar__detail">
+              <p>
+                なんか対面イベントとかやりました
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="seminar seminarlist__item">
+            <img class="seminar__thumbnail" src="NEW_figure3.webp" alt="NEWのがぞう3" loading="lazy">
+          <div class="seminar__info">
+            <div class="seminar__name">活動名</div>
+            <div class="seminar__detail">
+              <p>
+                なんか対面イベントとか(ry
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section id="contact" class="section sectionlist__item">
+      <h2>ご連絡</h2>
+      <p>ご連絡はメールでお願いいたします。</p>
+      <p>メールアドレスは*****<wbr>@<wbr>gmail<wbr>.comです。</p>
+    </section>
+  </main>
+
+
+  <footer class="footer page__footer">
+    <ul class="snslist footer__snslist">
+      <li class="snslist__item">
+        <a href="Twitterアカウント？" target="_blank" rel="noreferrer">
+          <img class="snsicon" src="なんか画像" alt="Twitter">
+        </a>
+      </li>
+    </ul>
+    <small class="footer__copyright">© 2022 NEW</small>
+  </footer>
+  <script>
+    // 以下は活動をランダムに選び出すJavaScriptです。
+    (() => {
+      "use strict";
+      const seminarList = document.getElementById("seminarlist");
+
+      if (!seminarList) {
+        return;
+      }
+
+      const children = seminarList.children;
+      const fragment = document.createDocumentFragment();
+
+      for (let i = 0; i < 4 && children.length > 0; i++) {
+        const rand = Math.floor(Math.random() * children.length);
+        fragment.appendChild(children[rand]);
+      }
+
+      seminarList.innerHTML = "";
+      seminarList.appendChild(fragment);
+    })();
+  </script>
+</body>
+</html>
